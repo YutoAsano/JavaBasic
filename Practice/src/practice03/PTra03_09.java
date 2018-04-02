@@ -20,7 +20,7 @@ public class PTra03_09 {
 		 */
 		java.util.Scanner scanner = new java.util.Scanner(System.in);
       
-		System.out.println("1");
+		System.out.println("0～6までの数字を入力して下さい。");
         
         String line = scanner.nextLine();
 	   

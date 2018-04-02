@@ -21,6 +21,11 @@ public class PTra04_05 {
 
 			System.out.println("あなたの手は？");
 			System.out.println("0:グー、1：チョキ、2：パー");
+			int i;
+			int limitNumber =2;
+			int random = 0;random = new java.util.Random().nextInt(limitNumber);
+            i=random;
+			
 
 			// コマンドプロンプトで入力した文字列が変数lineに代入されます
 			String line = scanner.nextLine();
@@ -46,20 +51,55 @@ public class PTra04_05 {
 			 */
 			if (cpuHand == 0) {
 				System.out.println("グー！");
-
-
-
+				switch (i) {
+	            case 0:
+	            	 winFlg=false;
+	                System.out.println("あいこ");
+	                break;
+	            case 1:
+	            	 winFlg=false;
+	            	System.out.println("負け");
+	            	 break;
+	            case 2:
+	            	 winFlg=true;
+	            	System.out.println("勝ち");
+	                break;
+				}
 			} else if (cpuHand == 1) {
 				System.out.println("チョキ！！");
-
+				switch (i) {
+	            case 0:
+	            	winFlg=true;
+	                System.out.println("勝ち");
+	                break;
+	            case 1:
+	            	 winFlg=false;
+	            	System.out.println("あいこ");
+	            	 break;
+	            case 2:
+	            	 winFlg=false;
+	                System.out.println("負け");
+	                break;
+	                }
 
 
 			} else {
 				System.out.println("パー！！");
-
-
-
-			}
+				switch (i) {
+	            case 0:
+	            	winFlg=false;
+	                System.out.println("負け");
+	                break;
+	            case 1:
+	            	winFlg=true;
+	            	System.out.println("勝ち");
+	            	 break;
+	            case 2:
+	            	winFlg=false;
+	                System.out.println("あいこ");
+	                break;
+				 }
+			    }
 
 		}
 	}
